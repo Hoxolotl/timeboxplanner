@@ -1,0 +1,14 @@
+{
+  "name": "timeboxplanner",
+  "version": "1.0.0",
+  "description": "An application to assign tasks according to their priority score. It is a planner but it will optimise tasks and present an auto-generated todo-list. The idea is to keep people from procrastinating.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "planner"
+  ],
+  "author": "Govert Combée",
+  "license": "MIT"
+}
