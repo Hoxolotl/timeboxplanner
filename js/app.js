@@ -1,9 +1,10 @@
 var http = require('http');
-var server = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    var message = 'Time Box Planner!\n',
-        version = 'NodeJS ' + process.versions.node + '\n',
-        response = [message, version].join('\n');
-    res.end(response);
-});
-server.listen();
+var fs = require('fs');
+
+http.createServer(function(request, response) {  
+ response.writeHeader(200, {"Content-Type": "text/html"});  
+ var readSream = fs.createReadStream('../index.html','utf8')
+ readSream.pipe(response);
+}).listen(3000);
+
+console.log("server is running on port number ");
